@@ -1,0 +1,7 @@
+CAT 2- Portions                                                                                                                                                                                      Parallel Algorithm and Design:
+Preliminaries - Decomposition Techniques - Characteristics of Tasks and Interactions
+- Mapping techniques for Load balancing - Parallel Algorithm Models.
+Distributed Systems: Introduction of DS - Characterization of Distributed Systems -
+Challenges of Distributed Systems, Programming Using the Message-Passing Paradigm (MPI) - RPC and Java RMI
+Time in DS: Synchronizing physical clocks - Logical time and logical clocks
+                                                                  

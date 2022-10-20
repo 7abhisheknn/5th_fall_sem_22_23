@@ -1,0 +1,36 @@
+Module3: 10-15M
+TDG✓
+Doc✓
+Decomposition
+°Recursive
+°Data 
++Input
++Output
++Input+output
+°exp
+°speculative
+Models-4
+Mapping
+°static
+°dynamic
+
+Module4:
+DS
+Characteristics
+°heterogeneiry
+°availability
+°scalability
+°fault
+MPI-10M
+*Comments
+*Presentation
+*content
+DSM
+Skip case study part
+Java rmi 5 marks possible 
+
+Module5:10-15M
+Christian
+Berkeley
+Logical 
+Vector

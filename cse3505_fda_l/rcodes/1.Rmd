@@ -1,0 +1,6 @@
+---
+title: "1. sapply_tapply_lapply"
+author: "20BCE1025_Abhishek_N_N"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
