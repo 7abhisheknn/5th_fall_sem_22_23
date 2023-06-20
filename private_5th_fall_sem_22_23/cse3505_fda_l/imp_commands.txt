@@ -1,0 +1,3 @@
+file conversions
+	rmd to r
+	knitr::purl("./lab_6/20BCE1025_Abhishek_N_N_Lab_6.Rmd",documentation = 2)

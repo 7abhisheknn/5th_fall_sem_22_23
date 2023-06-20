@@ -1,0 +1,90 @@
+---
+title: "20BCE1025_Abhishek_N_N_Lab_6_Exp-6 Statistical Analysis of qualitative data"
+author: "20BCE1025 Abhishek N N"
+date: "20/09/2022"
+output: pdf_document
+---
+Use the survey data in MASS package to do the following:
+
+1. Import the package MASS
+```{r}
+library("MASS")
+```
+2. List the rows of data that has missing values.
+```{r}
+survey[rowSums(is.na(survey)) > 0,]
+#or
+survey[!complete.cases(survey),]
+```
+3. Create a data frame ‘newsurvey’ that contains the survey data after removing the na values. Use it for answering further queries
+```{r}
+newsurvey<-na.omit(survey)
+```
+4. How many male and female students participated in the survey?
+```{r}
+table(newsurvey["Sex"])
+```
+5. How many the left and right handers are there?
+```{r}
+table(newsurvey["W.Hnd"])
+```
+6. Find the relative frequency distribution of left and right handers and display them with the precision of two decimal places.
+```{r}
+round(table(newsurvey["W.Hnd"])/length(newsurvey$W.Hnd),2)
+```
+7. Display the male left hander and female left hander in the column format.
+```{r}
+t <- tapply(newsurvey$W.Hnd, newsurvey$Sex, table)
+t<-unname(unlist(t))
+d <-
+  data.frame(
+    male_left_hander = c(t[3]),
+    female_left_hander = c(t[1])
+  )
+d
+```
+8. What percentage of male left handers never smokes?
+```{r}
+#install.packages("dplyr")
+library("dplyr")
+```
+
+```{r}
+male_left_never=length(filter(newsurvey, Sex=="Male" & W.Hnd=="Left" & Smoke=="Never"))
+male_left=length(filter(newsurvey, Sex=="Male" & W.Hnd=="Left"))
+male_left_never/male_left*100
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

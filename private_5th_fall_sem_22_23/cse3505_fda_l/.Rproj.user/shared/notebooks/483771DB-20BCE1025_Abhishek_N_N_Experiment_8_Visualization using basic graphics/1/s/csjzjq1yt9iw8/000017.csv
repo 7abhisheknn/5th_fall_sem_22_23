@@ -1,0 +1,2 @@
+"0","n<-summary(cleansurvey$Pulse)"
+"0","boxplot(n,main=""Box Plot of Pulse Rate"", ylab=""pulse rate"")"

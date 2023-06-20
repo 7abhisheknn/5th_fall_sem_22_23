@@ -1,0 +1,3 @@
+"0","library(""MASS"")"
+"0","cleansurvey=survey[complete.cases(survey),]"
+"0","head(cleansurvey)"

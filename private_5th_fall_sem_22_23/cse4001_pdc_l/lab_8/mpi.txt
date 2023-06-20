@@ -1,0 +1,5 @@
+mpiexec -np 8 ./Sample.c
+mpirun -np hostfile ./Sample
+https://www.youtube.com/watch?v=m3wPCTTegcU
+tty tiny linux without gui 
+just enough operating system

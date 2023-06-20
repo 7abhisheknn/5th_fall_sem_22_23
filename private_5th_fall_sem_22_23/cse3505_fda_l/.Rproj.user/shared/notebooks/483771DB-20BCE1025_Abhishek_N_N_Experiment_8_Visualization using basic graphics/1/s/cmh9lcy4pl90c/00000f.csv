@@ -1,0 +1,7 @@
+"0","maleData = cleansurvey%>%filter(Sex=='Male')"
+"0","femaleData = cleansurvey%>%filter(Sex=='Female')"
+"0","maleHnd = cleansurvey$W.Hnd==""Left"""
+"0","femaleHnd = cleansurvey$W.Hnd==""Left"""
+"0","corrMale= cor(data.frame(W.Hnd=maleHnd, height=maleData$Height))"
+"0","corrFemale= cor(data.frame(W.Hnd=femaleHnd, height=femaleData$Height))"
+"0","heatmap(corrMale)"

@@ -1,0 +1,4 @@
+"0","ggplot(newSurvey, aes(x=newSurvey$Age)) + "
+"0","  geom_histogram() + "
+"0","  stat_bin(bins = 30) +"
+"0","  labs(title=""Age Distribution"", xlabel=""Age Range"", ylabel=""Frequency"")"

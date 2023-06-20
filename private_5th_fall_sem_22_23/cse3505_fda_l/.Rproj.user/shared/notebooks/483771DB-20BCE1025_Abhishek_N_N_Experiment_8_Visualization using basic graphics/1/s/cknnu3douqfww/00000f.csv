@@ -1,0 +1,4 @@
+"0","par(mfrow=c(2,3), mar=c(2,5,2,1),las=1,bty='n')"
+"0",""
+"0","x=c(sum(cleansurvey$Sex==""Male""),sum(cleansurvey$Sex==""Female""))"
+"0","barplot(x,main=""Male and Female Participants"",col=c(""green"",""red""))"

@@ -1,0 +1,4 @@
+"0","ggplot(newSurvey)+"
+"0","  geom_bar(aes(newSurvey$W.Hnd,fill=newSurvey$W.Hnd)) + "
+"0","  ggtitle(""Left Handers and Right Handers"") + "
+"0","  ylab(""count"")"

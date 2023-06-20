@@ -1,0 +1,116 @@
+---
+title: "20BCE1025_Abhishek_N_N_Experiment_8_Visualization using basic graphics"
+author: "20BCE1025_Abhishek_N_N"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+Use the newsurvey data obtained by cleaning ‘na’ values in survey data of MASS package to do the following:
+```{r}
+library("MASS")
+cleansurvey=survey[complete.cases(survey),]
+head(cleansurvey)
+```
+1. Plot a bar graph for the number of male and female participants in the survey. Provide the titleas "Male and Female participants" and specify the colours for the bars.
+```{r}
+x=c(sum(cleansurvey$Sex=="Male"),sum(cleansurvey$Sex=="Female"))
+barplot(x,main="Male and Female Participants",col=c("green","red"))
+```
+2. Plot a bar graph for the number of left handers and right handers in the survey. Provide the title as "Left Handers and Right Hnaders" and specify the colours for the bars.
+```{r}
+x=c(sum(cleansurvey$W.Hnd=="Left"),sum(cleansurvey$W.Hnd=="Right"))
+barplot(x,main="Left and Right Handers",col=c("blue","pink"))
+```
+3. Plot the distribution between male left handers and female left handers using bar chart. Provide the title as "Female Left Handers and Male Left Handers" and specify the colours for the bars.
+```{r}
+library(dplyr)
+x=filter(cleansurvey,Sex=="Female")
+y=filter(cleansurvey,Sex=="Male")
+x=c(sum(x$W.Hnd=="Left"),sum(y$W.Hnd=="Left"))
+barplot(x,main="Female Left and Male Left Handers",col=c("purple","orange"))
+```
+4. Draw the distribution of smoking habits of male left handers using pie chart.
+```{r}
+y=filter(cleansurvey,Sex=="Male")
+y=filter(y,W.Hnd=="Left")
+pie(table(y$Smoke),col = c("pink","blue","red","green"),main="Smoking Habits")
+```
+5.Draw the histogram of age distribution with the title as 'Age distribution' and xlabel as 'Age range' and ylabel as 'frequency'.
+```{r}
+hist(cleansurvey$Age,main="Age distribution",xlab="Age Range",ylab="frequency")
+```
+6. Plot the density distribution of age distribution with title as ‘Age distribution’ and xlabel as ‘Age range’ and ylabel as ‘density’.
+```{r}
+den <- density(cleansurvey$Age)
+plot(den, frame = FALSE, col = "blue",main='Age Distribution',xlab="Age Range",ylab="density")
+```
+7. Create a suitable grid for projecting the multiple charts obtained earlier
+```{r}
+par(mfrow=c(2,3), mar=c(2,5,2,1),las=1,bty='n')
+
+x=c(sum(cleansurvey$Sex=="Male"),sum(cleansurvey$Sex=="Female"))
+barplot(x,main="Male and Female Participants",col=c("green","red"))
+
+x=c(sum(cleansurvey$W.Hnd=="Left"),sum(cleansurvey$W.Hnd=="Right"))
+barplot(x,main="Left and Right Handers",col=c("blue","pink"))
+
+library(dplyr)
+x=filter(cleansurvey,Sex=="Female")
+y=filter(cleansurvey,Sex=="Male")
+x=c(sum(x$W.Hnd=="Left"),sum(y$W.Hnd=="Left"))
+barplot(x,main="Female Left and Male Left Handers",col=c("purple","orange"))
+
+y=filter(cleansurvey,Sex=="Male")
+y=filter(y,W.Hnd=="Left")
+pie(table(y$Smoke),col = c("pink","blue","red","green"),main="Smoking Habits")
+
+hist(cleansurvey$Age,main="Age distribution",xlab="Age Range",ylab="frequency")
+
+den <- density(cleansurvey$Age)
+plot(den, frame = FALSE, col = "blue",main='Age Distribution',xlab="Age Range",ylab="density")
+```
+8. Reveal the relationship between the age and writing hand span using scatter plot
+```{r}
+plot(cleansurvey$Wr.Hnd,cleansurvey$Age)
+```
+9. Plot the relationship between age, height and writing hand span in a single chart.
+```{r}
+Hand = cleansurvey$W.Hnd=='Left'
+df=data.frame(cleansurvey$Age,cleansurvey$Height,Hand)
+corr= cor(df)
+heatmap(corr)
+pairs(df)
+```
+10. Plot the relationship between height and writing hand span
+```{r}
+plot(cleansurvey$Height,cleansurvey$Wr.Hnd)
+```
+11. Plot the relationship between height and writing hand span based on gender and left and right handers.
+```{r}
+maleData = cleansurvey%>%filter(Sex=='Male')
+femaleData = cleansurvey%>%filter(Sex=='Female')
+maleHnd = cleansurvey$W.Hnd=="Left"
+femaleHnd = cleansurvey$W.Hnd=="Left"
+corrMale= cor(data.frame(W.Hnd=maleHnd, height=maleData$Height))
+corrFemale= cor(data.frame(W.Hnd=femaleHnd, height=femaleData$Height))
+heatmap(corrMale)
+heatmap(corrFemale)
+```
+12. Draw the boxplot for pulse rate to analyse the five summary statistics. Provide appropriate title and label
+```{r}
+n<-summary(cleansurvey$Pulse)
+boxplot(n,main="Box Plot of Pulse Rate", ylab="pulse rate")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+

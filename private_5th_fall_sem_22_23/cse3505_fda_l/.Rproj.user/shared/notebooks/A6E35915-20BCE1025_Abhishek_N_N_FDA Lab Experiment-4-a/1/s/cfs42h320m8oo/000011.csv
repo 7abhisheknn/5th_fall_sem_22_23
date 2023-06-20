@@ -1,0 +1,7 @@
+"0","total_avg=mean(eventScore2$total)"
+"0","total_avg"
+"1","[1]"
+"1"," 16.2"
+"1","
+"
+"0","subset(eventScore2, total>total_avg, select = name)"

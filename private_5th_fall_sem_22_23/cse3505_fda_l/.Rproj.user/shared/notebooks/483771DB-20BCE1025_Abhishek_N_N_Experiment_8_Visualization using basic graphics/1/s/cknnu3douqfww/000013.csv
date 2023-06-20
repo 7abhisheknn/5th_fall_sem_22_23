@@ -1,0 +1,6 @@
+"0",""
+"0","library(dplyr)"
+"0","x=filter(cleansurvey,Sex==""Female"")"
+"0","y=filter(cleansurvey,Sex==""Male"")"
+"0","x=c(sum(x$W.Hnd==""Left""),sum(y$W.Hnd==""Left""))"
+"0","barplot(x,main=""Female Left and Male Left Handers"",col=c(""purple"",""orange""))"

@@ -1,0 +1,4 @@
+"0","Hand = cleansurvey$W.Hnd=='Left'"
+"0","df=data.frame(cleansurvey$Age,cleansurvey$Height,Hand)"
+"0","corr= cor(df)"
+"0","heatmap(corr)"

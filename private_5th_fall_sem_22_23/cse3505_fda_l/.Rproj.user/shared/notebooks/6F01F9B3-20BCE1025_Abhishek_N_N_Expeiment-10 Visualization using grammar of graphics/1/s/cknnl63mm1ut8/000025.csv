@@ -1,0 +1,4 @@
+"0","ggplot(newSurvey, aes(x=Age,color=Exer,fill=Exer)) +"
+"0","facet_grid(.~Sex)+"
+"0","geom_histogram(alpha=0.7)+"
+"0","labs(title=""Age Distribution"", xlabel=""Age Range"", ylabel=""Frequency"")"

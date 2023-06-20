@@ -1,0 +1,2 @@
+"0","ggplot(newSurvey, aes(x=Wr.Hnd, y=Smoke))+"
+"0","geom_boxplot(outlier.colour=""red"", outlier.shape=8,outlier.size=4)"

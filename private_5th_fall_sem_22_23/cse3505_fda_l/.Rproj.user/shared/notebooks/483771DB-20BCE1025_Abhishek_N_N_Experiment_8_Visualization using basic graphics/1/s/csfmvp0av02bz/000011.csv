@@ -1,0 +1,2 @@
+"0","x=c(sum(cleansurvey$W.Hnd==""Left""),sum(cleansurvey$W.Hnd==""Right""))"
+"0","barplot(x,main=""Left and Right Handers"",col=c(""blue"",""pink""))"

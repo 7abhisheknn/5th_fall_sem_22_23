@@ -1,0 +1,114 @@
+"0","install.packages(""MASS"")"
+"2","Installing package into ‘/home/abhishek_n_n_20bce1025/R/x86_64-pc-linux-gnu-library/4.1’
+(as ‘lib’ is unspecified)
+"
+"2","trying URL 'https://cloud.r-project.org/src/contrib/MASS_7.3-58.1.tar.gz'
+"
+"2","Content type 'application/x-gzip'"
+"2"," length 514882 bytes (502 KB)
+"
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","="
+"2","
+"
+"2","downloaded 502 KB
+
+"
+"2","* installing *source* package ‘MASS’ ...
+"
+"2","** package ‘MASS’ successfully unpacked and MD5 sums checked
+"
+"2","** using staged installation
+"
+"2","** libs
+"
+"1","gcc -I""/usr/share/R/include"" -DNDEBUG      -fpic  -g -O2 -ffile-prefix-map=/build/r-base-4A2Reg/r-base-4.1.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MASS.c -o MASS.o
+"
+"1","gcc -I""/usr/share/R/include"" -DNDEBUG      -fpic  -g -O2 -ffile-prefix-map=/build/r-base-4A2Reg/r-base-4.1.2=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lqs.c -o lqs.o
+"
+"1","gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -flto=auto -Wl,-z,relro -o MASS.so MASS.o lqs.o -L/usr/lib/R/lib -lR
+"
+"2","installing to /home/abhishek_n_n_20bce1025/R/x86_64-pc-linux-gnu-library/4.1/00LOCK-MASS/00new/MASS/libs
+"
+"2","** R
+"
+"2","** data
+"
+"2","*** moving datasets to lazyload DB
+"
+"2","** inst
+"
+"2","** byte-compile and prepare package for lazy loading
+"
+"2","** help
+"
+"2","*** installing help indices
+"
+"2","** building package indices
+"
+"2","** testing if installed package can be loaded from temporary location
+"
+"2","** checking absolute paths in shared objects and dynamic libraries
+"
+"2","** testing if installed package can be loaded from final location
+"
+"2","** testing if installed package keeps a record of temporary installation path
+"
+"2","* DONE (MASS)
+"
+"2","
+"
+"2",""
+"2","The downloaded source packages are in
+	‘/tmp/RtmpY1kfc0/downloaded_packages’"
+"2",""
+"2","
+"

@@ -1,0 +1,2 @@
+"0","x=c(sum(cleansurvey$Sex==""Male""),sum(cleansurvey$Sex==""Female""))"
+"0","barplot(x,main=""Male and Female Participants"",col=c(""green"",""red""))"

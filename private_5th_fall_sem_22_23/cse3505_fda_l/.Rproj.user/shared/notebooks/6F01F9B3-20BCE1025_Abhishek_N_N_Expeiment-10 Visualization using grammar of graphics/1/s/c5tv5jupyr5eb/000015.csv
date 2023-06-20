@@ -1,0 +1,6 @@
+"0","smoking_habits = ggplot(as.data.frame(table(male_left_handers$Smoke)),"
+"0","aes(x = """", y =Freq, fill=Var1)) +"
+"0","geom_bar(stat=""identity"")+"
+"0","geom_col(color = ""black"") +"
+"0","coord_polar(""y"", start=0)"
+"0","smoking_habits"

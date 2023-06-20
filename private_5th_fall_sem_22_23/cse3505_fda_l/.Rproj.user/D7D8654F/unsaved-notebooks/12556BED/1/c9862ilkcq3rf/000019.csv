@@ -1,0 +1,26 @@
+"0","library(""dplyr"")"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following object is masked from ‘package:MASS’:
+
+    select
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","starwars %>%"
+"0","select(name, mass) %>%"
+"0","mutate("
+"0","mass2 = mass * 2,"
+"0","mass2_squared = mass2 * mass2"
+"0",")"

@@ -1,0 +1,6 @@
+"0","message<-paste(first_name,last_name,""bought"" ,as.character(B) ,""chocolates"")"
+"0","message"
+"1","[1]"
+"1"," ""Jai Ganesh bought 5 chocolates"""
+"1","
+"

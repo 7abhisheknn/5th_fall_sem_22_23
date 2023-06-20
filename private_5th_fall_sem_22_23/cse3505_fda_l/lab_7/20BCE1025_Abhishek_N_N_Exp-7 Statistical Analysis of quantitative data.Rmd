@@ -1,0 +1,52 @@
+---
+title: "20BCE1025_Abhishek_N_N_Exp-7 Statistical Analysis of quantitative data"
+author: "20BCE1025_Abhishek_N_N"
+date: "2022-10-03"
+output: pdf_document
+---
+Use the newsurvey data obtained by cleaning ‘na’ values in survey data of MASS package to do the following:
+```{r}
+#install.packages("MASS")
+library(MASS)
+newSurvey = na.omit(survey)
+```
+1. Find the range of students’ age participated in the survey.
+```{r}
+age=newSurvey$Age
+range(age)
+```
+2. Break the age range into non-overlapping sub-intervals by defining a sequence of equal distance break points of 10 by rounding the range to nearest integer.
+```{r}
+breaks = seq(16.917, 70.417, by=10)
+breaks
+```
+3. Find the distribution of the age range according to the sub-intervals with cut with its right boundary opened. Display it in column form.
+```{r}
+age.cut = cut(age, breaks, right=FALSE)
+age.freq = table(age.cut)
+age.freq=cbind(age.freq) 
+```
+4. Which age range of students has mostly participated in the survey.
+```{r}
+age.freq[which.max(age.freq)]
+```
+5. Similarly, find the frequency distribution of Wr.Hnd span and display it in column format.
+```{r}
+wrHnd=newSurvey$Wr.Hnd
+range(wrHnd)
+```
+```{r}
+breaks = seq(13.0, 23.2, by=2)
+breaks
+```
+```{r}
+wrHnd.cut = cut(wrHnd, breaks, right=FALSE)
+wrHnd.freq = table(wrHnd.cut)
+wrHnd.freq=cbind(wrHnd.freq) 
+wrHnd.freq
+```
+6. Find the relative frequency of Wr.Hnd and display it by correcting to 3 decimal places.
+```{r}
+wrHnd.relfreq = wrHnd.freq / nrow(newSurvey)
+round(wrHnd.relfreq, 3)
+```

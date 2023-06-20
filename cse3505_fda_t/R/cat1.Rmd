@@ -1,0 +1,508 @@
+---
+title: "R BASIC"
+author: "20BCE1025_Abhishek_N_N"
+date: "2022-09-02"
+output: pdf_document
+---
+# R Workspace
+```{r}
+rm(list=ls())
+```
+
+```{r}
+getwd()
+```
+```{r}
+x<-10
+ls()
+```
+```{r}
+help(options)
+# options()
+```
+```{r}
+options(digits = 3)
+```
+```{r}
+# history()
+# history(max=Inf)
+# savehistory(file = "myRHistory")
+# loadhistory(file = "diffRHistory.txt")
+```
+# How to Use Date Formats in R
+```{r}
+d<-Sys.Date()
+d
+```
+```{r}
+format(d,format="%a")
+format(d,format="%A")
+format(d,format="%u")
+```
+```{r}
+format(d,format="%b")
+format(d,format="%B")
+format(d,format="%m")
+```
+```{r}
+format(d,format="%y")
+format(d,format="%Y")
+format(d,format="%C")
+```
+
+```{r}
+format(d,format="%d")
+format(d,format="%j")
+```
+```{r}
+format(d,format="%D")
+format(d,format="%d-%b-%y")
+```
+# Get Date and Time in different Formats in R
+```{r}
+Sys.timezone()
+```
+```{r}
+difftime("2022-9-2","2002-4-7",units = "days")
+difftime("2022-9-2","2002-4-7",units = "weeks")
+difftime("2022-9-2","2002-4-7",units = "hours")
+```
+# Convert a String into Date Format in R
+```{r}
+s<-c("27/02/92")
+s
+d2<-as.Date(s,"%d/%m/%y")
+d2
+```
+```{r}
+s2 <- c("02 / 27 / 92", "02 / 27 / 92", "01 / 14 / 92", "02 / 28 / 92", "02 / 01 / 92")
+d3<-as.Date(s2,"%m / %d / %y")
+d3
+class(d3)
+```
+# How to compare time in R?
+```{r}
+t<-as.POSIXct("08:32:07",format="%H:%M:%S")
+t
+```
+```{r}
+t2 <- as.POSIXct("08:32:08", format = "%H:%M:%S")
+t2
+```
+```{r}
+if (t == t2) {
+  print("Equal times")
+} else{
+  if (t < t2) {
+    print ("Time1 smaller")
+  } else{
+    print ("Time2 smaller")
+  }
+}
+```
+```{r}
+difftime(t, t2, tz,units = c("auto", "secs", "mins","hours","days", "weeks"))
+class(difftime(t, t2, tz,units = c("auto", "secs", "mins","hours","days", "weeks")))
+```
+```{r}
+# declaring a time object
+time1 <- as.POSIXct("08:35:07", format = "%H:%M:%S")
+print ("Time 1")
+print (time1)
+time2 <- as.POSIXct("08:32:08", format = "%H:%M:%S")
+print ("Time 2")
+print (time2)
+if (time1 == time2) {
+  print("Equal times")
+} else {
+  # checking if time1 is smaller than time2
+  if (time1 < time2) {
+    print ("Time2 - Time1")
+    # calculating time2-time1
+    difftime(time2, time1, units = "secs")
+  } else{
+    # calculating time1-time2
+    print ("Time1 - Time2")
+    difftime(time1, time2, units = "secs")
+  }
+}
+```
+# Using ‘-‘ operator
+```{r}
+# declaring a time object
+time1 <- as.POSIXct("08:35:07", format = "%H:%M:%S")
+print ("Time 1")
+print (time1)
+time2 <- as.POSIXct("08:32:08", format = "%H:%M:%S")
+print ("Time 2")
+print (time2)
+if (time1 == time2) {
+  print("Equal times")
+} else{
+  # checking if time1 is smaller than time2
+  if (time1 < time2) {
+    print ("Time2 - Time1")
+    # calculating time2-time1
+    print (time2 - time1)
+  } else{
+    # calculating time1-time2
+    print ("Time1 - Time2")
+    print (time1 - time2)
+  }
+}
+```
+# Vectors
+```{r}
+apple <- c('red','green',"yellow")
+apple
+class(apple)
+```
+```{r}
+data1 = c(3, 6, 9, 12, 78, 34, 5, 7, 7) ## numerical data
+data1
+data1.text = c("Mon", "Tue", "Wed") ## Text data
+data1.text
+data1.text = c(data1.text, "Thu", "Fri")
+data1.text
+Data2=c(data1,data1.text)
+Data2
+```
+```{r}
+numbers = 1:10
+numbers
+numbers <- seq(from=0,to=100,by=20)
+numbers
+```
+```{r}
+v=seq(2,4, 0.4)
+V=seq(1,4, length.out = 5)
+v
+V
+```
+```{r}
+x<-vector(mode = "numeric", length=10)
+x
+```
+```{r}
+assign("b",c(1:12))
+b
+```
+Accessing vector elements using position.
+```{r} 
+t <- c("Sun","Mon","Tue","Wed","Thurs","Fri","Sat")
+u <- t[c(2,3,6)]
+u
+```
+Accessing vector elements using logical indexing.
+```{r}
+v <- t[c(TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE)]
+v
+```
+Accessing vector elements using negative indexing.
+```{r}
+x <- t[c(-2,-5)]
+x
+```
+Accessing vector elements using 0/1 indexing.
+```{r}
+y <- t[c(0,0,0,0,0,0,1)]
+y
+```
+```{r}
+y <- t[c(0,5,0,3,0,0,1)]
+y
+```
+# Vector Manipulation
+```{r}
+# Create two vectors.
+v1 <- c(3,8,4,5,0,11)
+v2 <- c(4,11,0,8,1,2)
+# Vector addition.
+add.result <- v1+v2
+print(add.result)
+# Vector subtraction.
+sub.result <- v1-v2
+print(sub.result)
+# Vector multiplication.
+multi.result <- v1*v2
+print(multi.result)
+# Vector division.
+divi.result <- v1/v2
+print(divi.result)
+mod.result=v1%%v2
+print(mod.result)
+```
+```{r}
+v <- c(3,8,4,5,0,11, -9, 304)
+# Sort the elements of the vector.
+sort.result <- sort(v)
+print(sort.result)
+# Sort the elements in the reverse order.
+revsort.result <- sort(v, decreasing = TRUE)
+print(revsort.result)
+length(v)
+# It is possible to delete an entire vector by assigning it to NULL.
+V=NULL
+V
+```
+```{r}
+v <- c(3,8,4,5,0,11, -9, 304)
+m <- rep(v,each=2)
+print(m)
+n <- rep(v,times=2)
+print(n)
+o <- rep(v,length.out=10)
+print(o)
+print(min(v))
+print(max(v))
+print(sum(v))
+print(mean(v))
+print(sd(v))
+print(which.min(v))
+```
+# LIST
+```{r}
+# Creating Vectors
+vec1 <- c(1, 2, 3)
+vec2 <- c(TRUE, FALSE)
+# Creating a list of Vectors
+listt = list(vec1, vec2)
+# Printing List
+print (listt)
+# Printing List
+print (listt[[1]])
+print (listt[[2]][1])
+```
+```{r}
+# R program to create a list of Vectors
+# Creating Vectors
+vec1 <- c(1, 2, 3)
+vec2 <- c(TRUE, FALSE)
+# Creating list of Vectors
+lst = list(vec1, vec2)
+# Creating a new Vector
+vec3 <- c(1 + 3i)
+# Adding Vector to list
+lst[[3]]<- vec3
+# Printing List
+print(lst)
+```
+```{r}
+# Modifying List element
+lst[[2]]<-c("TEACH", "CODING")
+
+# Removing Vector from list
+lst[[2]]<-NULL
+```
+```{r}
+# Firstly, create two lists.
+list1 <- list(1, 2, 3, 4, 5, 6, 7)
+list2 <- list("Geeks", "For", "Geeks")
+# Then to merge these two lists.
+merged_list <- c(list1, list2)
+print(merged_list)
+```
+```{r}
+list1 <- list(1:5)
+print(list1)
+list2 <-list(11:15)
+print(list2)
+# Now, convert the lists to vectors.
+v1 <- unlist(list1)
+v2 <- unlist(list2)
+print(v1)
+print(v2)
+```
+```{r}
+# Defining a list with names
+x <- list(mt = matrix(1:6, nrow = 2),lt = letters[1:8],n = c(1:10))
+# Print list elements using the names given
+# Prints element of the list named "mt"
+cat("Element named 'mt':\n")
+print(x$mt)
+cat("\n")
+# Print element of the list named "n"
+cat("Element named 'n':\n")
+print(x$n)
+```
+```{r}
+# Defining a named list
+lt <- list(a = 1,let = letters[1:8],mt = matrix(1:6, nrow = 2))
+cat("List before modifying:\n")
+print(lt)
+# Modifying element named 'a'
+lt$a <- 5
+cat("List after modifying:\n")
+print(lt)
+# Removing element named 'a'
+lt <- within(lt, rm(a))
+```
+# Matrix
+```{r}
+M = matrix( c('a','a','b','c','b','a'), nrow = 2, ncol = 3, byrow = TRUE)
+print(M)
+```
+```{r}
+y <- matrix(1:20, nrow = 4, ncol = 5)
+A = matrix(c(1,2,3,4),nrow=2,byrow=T)
+print(y)
+print(A)
+```
+```{r}
+Rownames=c("R1","R2","R2")
+Colnames=c("C1","C2","C3")
+y = matrix(20:15, nrow = 3, ncol = 3, dimnames=list(Rownames,Colnames))
+y
+y = matrix(20:9, nrow = 3, ncol = 3, dimnames=list(Rownames,Colnames))
+y
+```
+```{r}
+A <- matrix(c(2,3,-2,1,2,2),3,2)
+A
+B <- matrix(c(1,4,-2,1,2,1),3,2)
+B
+```
+```{r}
+C<-A+B
+C
+A - B
+```
+```{r}
+c<-3
+c*A
+```
+```{r}
+A <- matrix(c(2,3,-2,1,2,2),3,2)
+A
+D <- matrix(c(2,-2,1,2,3,1),2,3)
+D
+C <- D %*% A
+C
+```
+```{r}
+A
+AT <- t(A)
+AT
+ATT <- t(AT)
+ATT
+```
+Unit Matrix
+```{r}
+U <- matrix(1,3,2)
+U
+```
+Zero Matrix
+```{r}
+Z <- matrix(0,3,2)
+Z
+```
+# INCOMPLETE PAGE NO 27 OF R_Vector_List_Matrix_Array_DFrame
+
+```{r}
+result <- array(c(1:100),dim = c(3,3,2))
+result
+```
+```{r}
+print(result[3,,2])
+print(result[1,3,1])
+print(result[,,2])
+```
+```{r}
+# Create two vectors of different lengths.
+vector1 <- c(5, 9, 3, 10, 12)
+vector2 <- c(10, 11, 12, 13, 14, 15)
+column.names <- c("COL1", "COL2", "COL3")
+row.names <- c("ROW1", "ROW2", "ROW3")
+matrix.names <- c("Matrix1", "Matrix2")
+# Take these vectors as input to the array.
+result <- array(
+  c(vector1, vector2),
+  dim = c(3, 3, 2),
+  dimnames = list(row.names, column.names, matrix.names)
+)
+print(result)
+```
+```{r}
+# Create two vectors of different lengths.
+vector1 <- c(5, 9, 3)
+vector2 <- c(10, 11, 12, 13, 14, 15)
+# Take these vectors as input to the array.
+array1 <- array(c(vector1, vector2), dim = c(3, 3, 2))
+# Create two vectors of different lengths.
+vector3 <- c(9, 1, 0)
+vector4 <- c(6, 0, 11, 3, 14, 1, 2, 6, 9)
+array2 <- array(c(vector1, vector2), dim = c(3, 3, 2))
+# create matrices from these arrays.
+matrix1 <- array1[, , 2]
+matrix1
+matrix2 <- array2[, , 2]
+matrix2
+# Add the matrices.
+result <- matrix1 + matrix2
+print(result)
+```
+```{r}
+m1 <- matrix(C<-(1:10),nrow=5, ncol=6)
+m1
+a_m1 <- apply(m1, 2, sum)
+a_m1
+```
+```{r}
+vector1 <- c(5,9,3)
+vector2 <- c(10,11,12,13,14,15)
+new.array <- array(c(vector1,vector2),dim = c(3,3,2))
+print(new.array)
+# Use apply to calculate the sum of the rows across all
+# the matrices.
+result <- apply(new.array, c(1), sum)
+print(result)
+```
+```{r}
+my_df <- data.frame(
+  Id = c(1, 2, 3),
+  Name = c("Ramu", "Raju", "Ravi"),
+  Marks = c(50, 40, 25)
+)
+my_df
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

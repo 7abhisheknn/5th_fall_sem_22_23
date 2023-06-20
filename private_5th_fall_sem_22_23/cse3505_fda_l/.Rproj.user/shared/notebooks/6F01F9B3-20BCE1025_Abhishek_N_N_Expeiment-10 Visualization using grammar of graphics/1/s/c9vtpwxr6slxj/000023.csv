@@ -1,0 +1,7 @@
+"0","male_left_handers= newSurvey[newSurvey$W.Hnd==""Left"" & newSurvey$Sex==""Male"",]"
+"0","female_left_handers= newSurvey[newSurvey$W.Hnd==""Left"" & newSurvey$Sex==""Female"",]"
+"0","custom_data = rbind(male_left_handers, female_left_handers)"
+"0","ggplot(as.data.frame(table(custom_data$Sex)), aes(x=Var1, y = Freq,"
+"0","fill=Var1)) +"
+"0","geom_bar(stat=""identity"")+"
+"0","labs(title=""Female Left Handers and Male Left Handers"")"

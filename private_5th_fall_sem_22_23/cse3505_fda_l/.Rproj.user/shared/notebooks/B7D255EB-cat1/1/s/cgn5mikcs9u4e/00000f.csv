@@ -1,0 +1,5 @@
+"0","# Modifying List element"
+"0","lst[[2]]<-c(""TEACH"", ""CODING"")"
+"0",""
+"0","# Removing Vector from list"
+"0","lst[[2]]<-NULL"

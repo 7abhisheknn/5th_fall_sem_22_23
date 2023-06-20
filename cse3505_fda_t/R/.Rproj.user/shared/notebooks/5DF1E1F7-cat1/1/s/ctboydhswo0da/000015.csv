@@ -1,0 +1,6 @@
+"0","my_df <- data.frame("
+"0","  Id = c(1, 2, 3),"
+"0","  Name = c(""Ramu"", ""Raju"", ""Ravi""),"
+"0","  Marks = c(50, 40, 25)"
+"0",")"
+"0","my_df"

@@ -1,0 +1,8 @@
+"0","t <- tapply(newsurvey$W.Hnd, newsurvey$Sex, table)"
+"0","t<-unname(unlist(t))"
+"0","d <-"
+"0","  data.frame("
+"0","    male_left_hander = c(t[3]),"
+"0","    female_left_hander = c(t[1])"
+"0","  )"
+"0","d"

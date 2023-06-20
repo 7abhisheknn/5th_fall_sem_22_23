@@ -1,0 +1,7 @@
+"0","library(""stringr"")"
+"0","rhymes<-sub( ""Little"", ""Big"",rhymes)"
+"0","rhymes"
+"1","[1]"
+"1"," ""Twinkle Twinkle Big Star"""
+"1","
+"

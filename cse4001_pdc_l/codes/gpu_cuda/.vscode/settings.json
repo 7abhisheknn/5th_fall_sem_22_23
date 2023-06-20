@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.php": "html",
+        "random": "cpp"
+    }
+}

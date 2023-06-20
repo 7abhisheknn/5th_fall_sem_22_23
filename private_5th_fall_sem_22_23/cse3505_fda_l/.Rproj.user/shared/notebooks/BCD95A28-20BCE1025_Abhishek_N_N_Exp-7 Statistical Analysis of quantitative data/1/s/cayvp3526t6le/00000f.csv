@@ -1,0 +1,3 @@
+"0","age.cut = cut(age, breaks, right=FALSE)"
+"0","age.freq = table(age.cut)"
+"0","age.freq=cbind(age.freq) "

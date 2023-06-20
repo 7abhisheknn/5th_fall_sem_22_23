@@ -1,0 +1,118 @@
+---
+title: "CSE3505_FDA_Lab_Exp_2"
+author: "20BCE1025_Abhishek_N_N"
+date: "2022-08-17"
+output: pdf_document
+---
+# Working with Vectors in R
+
+1. Create vector ‘class’ to store the class names ‘class1’,’class2’,…,’class5’ 
+```{r}
+class <- c("class1","class2","class3","class4","class5")
+class
+```
+
+2. Use assign() function to create a vector ‘avg’ to store the average marks. 
+```{r}
+avg <- c(0,0,0,0,0)
+assign("avg", c(80, 90, 95, 50, 70))
+avg
+```
+
+3. Display the average mark of class2.
+```{r}
+avg[2]
+```
+
+4. Display all the average marks except class 2.
+```{r}
+avg[c(TRUE,FALSE,TRUE,TRUE,TRUE)]
+```
+
+5. Access the average mark of class4 by its name.
+```{r}
+avg[match("class4",class)]
+```
+
+6. Find the minimum average mark and print the class which scored it.
+```{r}
+min(avg)
+class[which.min(avg)]
+```
+
+7. Find the maximum average mark and print the class which scored it.
+```{r}
+max(avg)
+class[which.max(avg)]
+```
+
+8. Find the total of average marks scored by all classes.
+```{r}
+sum(avg)
+```
+
+9. Find the mean of the average marks scored by all classes.
+```{r}
+mean(avg)
+```
+
+
+10. Find the standard deviation of the average marks scored by all classes.
+```{r}
+sd(avg)
+```
+
+11. Arrange the average marks in ascending order.
+```{r}
+avg<-sort(avg)
+avg
+```
+
+12. Create a vector classes by repeat the vector class twice.
+```{r}
+classes<-rep(class, times=2)
+classes
+```
+
+13. Create a vector marks by repeating each average mark twice.
+```{r}
+marks<-rep(avg, times=2)
+marks
+```
+
+14. Create a vector ‘report’ by adding the vector ‘avg’ with a sequence of 10 to 1 and find its length.
+```{r}
+report <- c(avg,10:1)
+report
+length(report)
+```
+
+15. Identify the classes for which average marks>70.
+```{r}
+for(a in avg){
+  if (a>70) print(a)
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,222 @@
+---
+title: "CSE3505_FDA_Lab_Exp_1"
+author: "20BCE1025_Abhishek_N_N"
+date: "2022-08-16"
+output: pdf_document
+---
+## Contents
+1. Lab 1 Exercise Understanding Basic Data Types in R
+2. Lab 1 Sample Practice
+
+# Lab 1 Exercise Understanding Basic Data Types in R
+
+```{r}
+rm(list=ls())
+```
+
+1) initial decimal money let it be A
+```{r}
+A<-10.5
+A
+```
+2) class name of A
+```{r}
+class(A)
+```
+3) checking A is numeric?
+```{r}
+is.numeric(A)
+```
+4) integer value to B and Displaying it
+```{r}
+B<-5
+B
+```
+5) check B is Integer ?
+```{r}
+is.integer(B)
+```
+
+6) variable c to store rupee part of A
+```{r}
+C<-as.integer(A)
+C
+```
+7) cost of one chocolate
+```{r}
+cost=C/B
+cost
+```
+8) representing money as char string
+```{r}
+as.character(A)
+```
+9) storing first and last name of kid
+```{r}
+first_name<-"Jai"
+last_name<-"Ganesh"
+```
+10) displaying message
+```{r}
+message<-paste(first_name,last_name,"bought" ,as.character(B) ,"chocolates")
+message
+```
+
+
+11) extracting "Little" from "Twinkle Twinkle Little Star"
+```{r}
+rhymes<-"Twinkle Twinkle Little Star"
+rhymes
+```
+```{r}
+extracted_text=substr(rhymes, 17, 22)
+extracted_text
+```
+12) replacing little as big
+```{r}
+library("stringr")
+rhymes<-sub( "Little", "Big",rhymes)
+rhymes
+```
+13) complex no to x
+```{r}
+x<-2+3i
+x
+```
+14) real part of x
+```{r}
+Re(x)
+```
+15) imaginary part of x
+```{r}
+Im(x)
+```
+16) computing square root of negative number
+```{r}
+sqrt(as.complex(-15))
+```
+
+# Lab 1 Sample Practice
+assign and print a variable
+```{r}
+x<-1
+print(x)
+```
+```{r}
+x
+```
+```{r}
+msg="hello"
+msg
+```
+```{r}
+typeof(x)
+```
+```{r}
+typeof(msg)
+```
+explicit and implicit printing
+```{r}
+x<-1:20
+print(x)
+x
+```
+```{r}
+rollNo<-1:70
+rollNo
+```
+```{r}
+y<-20:30
+y
+```
+```{r}
+x<-c(0.5,0.6)
+x
+```
+```{r}
+x<-c(TRUE,FALSE)
+x
+```
+```{r}
+x<-c(T,F)
+x
+```
+```{r}
+x<-c("a","b","c")
+x
+```
+```{r}
+x=9:29
+x
+```
+```{r}
+x=c(1+0i,2+4i)
+x
+```
+```{r}
+x<-vector("numeric",length=10)
+x
+```
+to get help
+```{r}
+?type
+```
+```{r}
+help(type)
+```
+
+```{r}
+y1<-c(1.7,"a")
+y1
+```
+```{r}
+y2=c(TRUE,2)
+y2
+```
+```{r}
+y3<-c("a",TRUE);y3
+```
+```{r}
+class(y1)
+class(y2)
+class(y3)
+```
+```{r}
+y11<-c(1.7,"3.2")
+y11
+class(y11)
+```
+```{r}
+y22<-c(FALSE,TRUE)
+y22
+class(y22)
+```
+
+-------------------------
+Explicit Coercion
+-------------------------
+```{r}
+x<-0:6
+x
+class(x)
+```
+```{r}
+y=as.numeric(x)
+y
+class(y)
+```
+```{r}
+z=as.character(x)
+z
+class(z)
+```
+```{r}
+l=as.logical(x)
+l
+class(l)
+```
+```{r}
+com=as.complex(x)
+com
+class(com)
+```

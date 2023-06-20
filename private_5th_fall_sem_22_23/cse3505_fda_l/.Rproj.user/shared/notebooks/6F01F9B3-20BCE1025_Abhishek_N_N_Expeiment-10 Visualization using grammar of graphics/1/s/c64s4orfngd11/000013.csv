@@ -1,0 +1,6 @@
+"0","library(ggplot2)"
+"0","ggplot(newSurvey)+"
+"0","  geom_bar(aes(newSurvey$Sex,fill=newSurvey$Sex)) + "
+"0","  ggtitle(""Male and Female participants"") + "
+"0","  xlab(""male and female"") + "
+"0","  ylab(""frequency"")"

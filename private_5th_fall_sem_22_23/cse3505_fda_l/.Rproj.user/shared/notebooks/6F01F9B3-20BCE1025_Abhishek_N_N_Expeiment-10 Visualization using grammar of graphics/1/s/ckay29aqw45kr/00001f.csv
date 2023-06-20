@@ -1,0 +1,3 @@
+"0","ggplot(newSurvey, aes(x=Wr.Hnd, y=NW.Hnd, color=W.Hnd, )) +"
+"0","facet_grid(.~Clap) +"
+"0","geom_point(size=2)"

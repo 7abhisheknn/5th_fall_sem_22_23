@@ -1,0 +1,73 @@
+---
+title: "20BCE1025_Abhishek_N_N_Lab-Ex-3-Working with matrices in R"
+author: "20BCE1025_Abhishek_N_N"
+date: "2022-09-09"
+output: pdf_document
+---
+1. Represent the height in cm information of a team of 12 basketball players as a matrix of dimension 4x3 in row major form.
+```{r}
+heights <- c(150, 165, 133, 155, 177, 187, 165, 190, 173, 149, 134, 157)
+m <- matrix(heights, nrow = 4, ncol = 3, byrow = TRUE)
+m
+```
+2. Access the height at row 3 and column 2.
+```{r}
+m[3,2]
+```
+3. Display all the heights in row 2.
+```{r}
+m[2,]
+```
+4. Display all the heights in column 3.
+```{r}
+m[,3]
+```
+5. Extract the heights in all rows but only in column 1 and 3.
+```{r}
+m[,c(1,3)]
+```
+6. Find the transpose of the matrix.
+```{r}
+t(m)
+```
+7. Four more players got added to the team. Update the matrix to reflect the heights of the players.
+```{r}
+m<-cbind(m,c(150, 151, 152, 153))
+m
+```
+8. Append three more players’ height in the matrix.
+```{r}
+m<-rbind(m,c(160, 161, 162))
+m
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

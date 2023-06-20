@@ -1,0 +1,3 @@
+"0","library(MASS)"
+"0","newSurvey=na.omit(survey)"
+"0","head(newSurvey)"

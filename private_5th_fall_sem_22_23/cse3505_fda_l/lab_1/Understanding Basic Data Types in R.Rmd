@@ -1,0 +1,91 @@
+---
+title: "Lab 1 Exercise Understanding Basic Data Types in R.nb"
+output: html_notebook
+---
+
+```{r}
+rm(list=ls())
+```
+
+1) initial decimal money let it be A
+```{r}
+A<-10.5
+A
+```
+2) class name of A
+```{r}
+class(A)
+```
+3) checking A is numeric?
+```{r}
+is.numeric(A)
+```
+4) integer value to B and Displaying it
+```{r}
+B<-5
+B
+```
+5) check B is Integer ?
+```{r}
+is.integer(B)
+```
+
+6) variable c to store rupee part of A
+```{r}
+C<-as.integer(A)
+C
+```
+7) cost of one chocolate
+```{r}
+cost=C/B
+cost
+```
+8) representing money as char string
+```{r}
+as.character(A)
+```
+9) storing first and last name of kid
+```{r}
+first_name<-"Jai"
+last_name<-"Ganesh"
+```
+10) displaying message
+```{r}
+message<-paste(first_name,last_name,"bought" ,as.character(B) ,"chocolates")
+message
+```
+
+
+11) extracting "Little" from "Twinkle Twinkle Little Star"
+```{r}
+rhymes<-"Twinkle Twinkle Little Star"
+rhymes
+```
+```{r}
+extracted_text=substr(rhymes, 17, 22)
+extracted_text
+```
+12) replacing little as big
+```{r}
+library("stringr")
+rhymes<-sub( "Little", "Big",rhymes)
+rhymes
+```
+13) complex no to x
+```{r}
+x<-2+3i
+x
+```
+14) real part of x
+```{r}
+Re(x)
+```
+15) imaginary part of x
+```{r}
+Im(x)
+```
+16) computing square root of negative number
+```{r}
+sqrt(as.complex(-15))
+```
+

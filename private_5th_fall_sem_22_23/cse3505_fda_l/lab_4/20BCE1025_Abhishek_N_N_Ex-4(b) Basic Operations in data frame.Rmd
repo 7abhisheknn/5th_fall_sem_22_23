@@ -1,0 +1,86 @@
+---
+title: "20BCE1025_Abhishek_N_N_Ex-4(b) Basic Operations in data frame"
+author: "20BCE1025_Abhishek_N_N"
+date: "2022-09-12"
+output: pdf_document
+---
+1. Install the package MASS.
+```{r}
+install.packages("MASS")
+```
+2. Import the package MASS.
+```{r}
+library("MASS")
+```
+3. Display the structure of the data survey.
+```{r}
+str(survey)
+```
+4. Check the class and type of the data set survey in MASS.
+```{r}
+class(survey)
+typeof(survey)
+```
+5. Get the number of rows and columns of the survey data frame.
+```{r}
+nrow(survey)
+ncol(survey)
+```
+6. Get the dimension of the survey data frame.
+```{r}
+dim(survey)
+```
+7. Provide the statistical summary of the data frame.
+```{r}
+summary(survey)
+```
+8. Display the column names of the survey data frame
+```{r}
+names(survey)
+```
+9. Retrieve the top 3 rows from the data frame.
+```{r}
+head(survey,3)
+```
+10. Extract the bottom 2 rows from the data frame.
+```{r}
+tail(survey,2)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

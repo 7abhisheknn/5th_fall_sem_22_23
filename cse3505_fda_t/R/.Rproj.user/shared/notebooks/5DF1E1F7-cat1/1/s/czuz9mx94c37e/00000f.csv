@@ -1,0 +1,4 @@
+"0","# history()"
+"0","# history(max=Inf)"
+"0","# savehistory(file = ""myRHistory"")"
+"0","# loadhistory(file = ""diffRHistory.txt"")"

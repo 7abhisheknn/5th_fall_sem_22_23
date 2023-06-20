@@ -1,0 +1,2 @@
+"0",""
+"0","hist(cleansurvey$Age,main=""Age distribution"",xlab=""Age Range"",ylab=""frequency"")"

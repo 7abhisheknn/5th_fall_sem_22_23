@@ -1,0 +1,21 @@
+------------------------------------------------------------------------------------------------------------------------------------------
+CAT2 Syllabus
+-------------------------------------------------------------------------------------------------------------------------------------------
+Module 2 :
+Task Analysis, Storyboarding, Use Cases, Primary Stakeholder Profiles, Project
+Management Document.
+-------------------------------------------------------------------------------------------------------------------------------------------
+Module 3 :
+Model Human Processor - Working Memory, Long-Term Memory, Processor Timing, Keyboard Level
+Model - Operators, Encoding Methods, Heuristics for M Operator Placement, What the Keyboard Level
+Model Does Not Model, Application of the Keyboard Level Model, GOMS - CMN-GOMS Analysis,
+Modeling Structure, State Transition Networks - Three-State Model, Glimpse Model, Physical Models,
+Fitts‟ Law.
+---------------------------------------------------------------------------------------------------------------------------------------------
+Module 4 :
+Schneiderman's eight golden rules, Norman's Sever principles, Norman's model of interaction, Nielsen's ten
+heuristics, Heuristic evaluation, contextual evaluation, Cognitive walk-through
+----------------------------------------------------------------------------------------------------------------------------------------------
+Note : Plus any other topics discussed in classroom relevant to the above topics.
+Don't write vague / imprecise / inexact answers. Read text books / reference books.
+-----------------------------------------------------------------------------------------------------------------------------------------------

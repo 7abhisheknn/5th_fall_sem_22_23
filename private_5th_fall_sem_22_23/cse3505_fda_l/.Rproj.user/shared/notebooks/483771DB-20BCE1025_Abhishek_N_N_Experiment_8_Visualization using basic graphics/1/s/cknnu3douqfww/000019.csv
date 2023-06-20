@@ -1,0 +1,3 @@
+"0",""
+"0","den <- density(cleansurvey$Age)"
+"0","plot(den, frame = FALSE, col = ""blue"",main='Age Distribution',xlab=""Age Range"",ylab=""density"")"

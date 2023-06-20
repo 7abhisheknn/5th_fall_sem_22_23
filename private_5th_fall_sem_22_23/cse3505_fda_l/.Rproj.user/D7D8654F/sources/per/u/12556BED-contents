@@ -1,0 +1,16 @@
+---
+title: "Untitled"
+author: "20BCE1025_Abhishek_N_N"
+date: "`r Sys.Date()`"
+output: html_document
+---
+```{r}
+library("dplyr")
+starwars %>%
+select(name, mass) %>%
+mutate(
+mass2 = mass * 2,
+mass2_squared = mass2 * mass2
+)
+```
+

@@ -1,0 +1,8 @@
+"0","eventScore <- data.frame("
+"0","  id = c(1:5),"
+"0","  name = c('Ram', 'Bheem', 'Soam', 'Raheem', 'Sham'),"
+"0","  coading_event = c(10, 2, 0, 7, 5),"
+"0","  design_event = c(0, 10, 4, 7, 0),"
+"0","  hackathon_event = c(2, 4, 10, 0, 0),"
+"0","  cyber_event = c(7, 0, 8, 3, 2)"
+"0",")"

@@ -1,0 +1,4 @@
+"0",""
+"0","y=filter(cleansurvey,Sex==""Male"")"
+"0","y=filter(y,W.Hnd==""Left"")"
+"0","pie(table(y$Smoke),col = c(""pink"",""blue"",""red"",""green""),main=""Smoking Habits"")"
